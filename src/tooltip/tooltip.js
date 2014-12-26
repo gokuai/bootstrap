@@ -284,7 +284,9 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
 
             var unregisterTriggers = function () {
               element.unbind(triggers.show, showTooltipBind);
-              element.unbind(triggers.hide, hideTooltipBind);
+              angular.forEach(triggers.hide.split(','),function(hideTrigger){
+                  element.unbind( hideTrigger, hideTooltipBind );
+              })
             };
 
             function prepTriggers() {
@@ -297,7 +299,9 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
                 element.bind( triggers.show, toggleTooltipBind );
               } else {
                 element.bind( triggers.show, showTooltipBind );
-                element.bind( triggers.hide, hideTooltipBind );
+                angular.forEach(triggers.hide.split(','),function(hideTrigger){
+                  element.bind( hideTrigger, hideTooltipBind );
+                })
               }
             }
             prepTriggers();
