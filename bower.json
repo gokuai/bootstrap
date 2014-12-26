@@ -5,7 +5,7 @@
   "authors": [
     "GeorgeXu <xuge123@gmail.com>"
   ],
-  "main":["dist/ui-bootstrap-0.12.1.js"],
+  "main":["dist/ui-bootstrap-tpls-0.12.1.js"],
   "moduleType": [
     "globals"
   ],
