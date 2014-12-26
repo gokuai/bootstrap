@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap",
+  "version": "0.12.1",
+  "homepage": "https://github.com/gokuai/bootstrap",
+  "authors": [
+    "GeorgeXu <xuge123@gmail.com>"
+  ],
+  "main":["ui-bootstrap-0.12.1.js"],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
