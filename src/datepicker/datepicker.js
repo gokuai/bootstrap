@@ -539,9 +539,9 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
       };
 
       element.bind('input change keyup', function() {
-+  	    if(scope.$$phase === "$digest" || scope.$$phase === "$apply") {
-+		       return;
-+     	}
+  	    if(scope.$$phase === "$digest" || scope.$$phase === "$apply") {
+		       return;
+     	}
         scope.$apply(function() {
           scope.date = ngModel.$modelValue;
         });
