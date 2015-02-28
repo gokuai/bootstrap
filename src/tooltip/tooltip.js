@@ -163,6 +163,10 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
             }
 
             function hideTooltipBind () {
+            	//PATCH for MNSTD-31925
+  	if(scope.$$phase === "$digest" || scope.$$phase === "$apply") {
+		 return;
+  	}
               scope.$apply(function () {
                 hide();
               });
